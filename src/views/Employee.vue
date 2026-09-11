@@ -4,6 +4,10 @@
     <h2 class="mb-3">รายข้อมูลพนักงาน</h2>
     
     <!-- ตารางแสดงข้อมูลลูกค้า -->
+     <div class="text-end mb-3">
+      <a href="/add_employee" class="btn btn-info" >Add+</a>
+     </div>
+
     <table class="table table-bordered table-striped">
       <thead class="table-dark">
         <tr>
@@ -38,7 +42,7 @@
     <div v-if="error" class="alert alert-danger">
       {{ error }}
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -62,7 +66,7 @@ export default {
     const fetchdata = async () => {
       try {
         // เรียก API (PHP)
-        const response = await fetch("http://localhost/week3_68703472/php_api/show_employee.php")
+        const response = await fetch("http://localhost/project-vuet2ww3/php_api/show_employee.php")
 
         // ตรวจสอบว่าการเรียกสำเร็จหรือไม่
         if (!response.ok) {
