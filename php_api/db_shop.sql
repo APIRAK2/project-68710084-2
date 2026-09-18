@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2026 at 06:39 AM
+-- Generation Time: Sep 18, 2026 at 06:54 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `contact_id` int(11) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `detail` text NOT NULL,
+  `fullname` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`contact_id`, `subject`, `detail`, `fullname`, `email`, `created_at`) VALUES
+(1, 'สอบถามข้อมูลการสมัครเรียน', 'ต้องการสอบถามรายละเอียดเกี่ยวกับการสมัครเรียน', 'สมชาย ใจดี', 'somchai@gmail.com', '2026-09-18 04:09:53'),
+(2, 'dada', 'dada', '06562656655', 'hjt', '2026-09-18 04:47:52'),
+(3, 'gsg', 'fafda', 'dhd wgwg', 'adad18awd@gmail.com', '2026-09-18 04:50:37');
 
 -- --------------------------------------------------------
 
@@ -100,6 +124,12 @@ INSERT INTO `products` (`product_id`, `product_name`, `description`, `price`, `i
 --
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`contact_id`);
+
+--
 -- Indexes for table `customers`
 --
 ALTER TABLE `customers`
@@ -120,6 +150,12 @@ ALTER TABLE `products`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `customers`
