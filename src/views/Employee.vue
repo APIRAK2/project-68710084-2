@@ -66,7 +66,7 @@ export default {
     const fetchdata = async () => {
       try {
         // เรียก API (PHP)
-        const response = await fetch("http://localhost/project-vuet2ww3/php_api/show_employee.php")
+        const response = await fetch("http://localhost/project-68710084-2/php_api/show_employee.php")
 
         // ตรวจสอบว่าการเรียกสำเร็จหรือไม่
         if (!response.ok) {

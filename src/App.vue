@@ -5,7 +5,10 @@
 <navbar />
 
 <!--แสดงหน้าเพจ-->
-  <router-view/>
+  <router-view />
+
+  <!--แสดง footer-->
+<Footer />
 
   </div>
   
@@ -13,9 +16,10 @@
 
 <script>
 import Navbar from './components/Navbar.vue';
+import Footer from './components/footer.vue';
 
 export default {
   name: "App",
-  components: {Navbar}
+  components: {Navbar,Footer}
 };
 </script>
