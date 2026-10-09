@@ -48,6 +48,24 @@ const routes = [
     name: 'add_contacts',
     
     component: () => import('../views/Add_Contacts.vue')
+  },
+  {
+    path: '/customer_crud',
+    name: 'customer_crud',
+    
+    component: () => import('../views/Customer_crud.vue')
+  },
+  {
+    path: '/employee_crud',
+    name: 'employee_crud',
+    
+    component: () => import('../views/employee_crud.vue')
+  },
+  {
+    path: '/contacts_crud',
+    name: 'contacts_crud',
+    
+    component: () => import('../views/contacts_crud.vue')
   }
 ]
 

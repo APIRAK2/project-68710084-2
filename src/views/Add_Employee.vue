@@ -47,7 +47,7 @@ export default {
   methods: {
     async addData() {
       try {
-        const res = await fetch("http://localhost/project-vuet2ww3/php_api/add_employee.php", {
+        const res = await fetch("http://localhost/project-68710084-2/php_api/add_employee.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(this.employee)

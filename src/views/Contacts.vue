@@ -6,7 +6,7 @@
 
     <!-- ตารางแสดงข้อมูล Contact Us -->
      <div class="text-end mb-3">
-      <a href="/add_contacts" class="btn btn-info" >Add+</a>
+      <a href="/Contacts.vue" class="btn btn-info" >Add+</a>
      </div>
     <table class="table table-bordered table-striped">
         <div class="text-end mb-3">
@@ -17,8 +17,8 @@
           <th>ลำดับที่</th>
           <th>เรื่อง</th>
           <th>รายละเอียด</th>
-          <th>ชื่อจริง</th>
-          <th>Email</th>
+          <th>ชื่อ-นามสกุล</th>
+          <th>อีเมล</th>
         </tr>
       </thead>
 
