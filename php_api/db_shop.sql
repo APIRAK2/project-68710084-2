@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2026 at 06:54 AM
+-- Generation Time: Oct 30, 2026 at 06:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assets`
+--
+
+CREATE TABLE `assets` (
+  `asset_id` int(11) NOT NULL,
+  `asset_code` varchar(50) NOT NULL COMMENT 'รหัสครุภัณฑ์',
+  `asset_name` varchar(255) NOT NULL COMMENT 'ชื่อครุภัณฑ์',
+  `purchase_date` date DEFAULT NULL COMMENT 'วันที่ซื้อ',
+  `price` decimal(10,2) DEFAULT NULL COMMENT 'ราคา',
+  `image` varchar(100) DEFAULT NULL COMMENT 'ชื่อไฟล์หรือ Path รูปภาพ',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `assets`
+--
+
+INSERT INTO `assets` (`asset_id`, `asset_code`, `asset_name`, `purchase_date`, `price`, `image`, `created_at`) VALUES
+(1, 'IT001', 'คอมพิวเตอร์ตั้งโต๊ะ', '2026-01-15', '25000.00', 'asset_6ae426552283b2.46430313.jpg', '2026-10-30 05:07:05'),
+(2, 'IT002', 'โน้ตบุ๊ก', '2026-02-10', '32000.00', 'asset_6ae4261a9e50a7.80740738.jpg', '2026-10-30 05:07:05'),
+(3, 'IT003', 'เครื่องพิมพ์', '2026-03-05', '8500.00', 'asset_6ae4263ed85e05.64551591.jpg', '2026-10-30 05:07:05'),
+(4, 'IT004', 'โปรเจกเตอร์', '2026-04-20', '18000.00', 'asset_6ae4264745ae59.17001776.jpg', '2026-10-30 05:07:05'),
+(5, 'IT005', 'เครื่องสำรองไฟ UPS', '2026-05-12', '3500.00', 'asset_6ae4264e12d535.94027564.jpg', '2026-10-30 05:07:05');
 
 -- --------------------------------------------------------
 
@@ -115,13 +142,19 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `description`, `price`, `image`, `stock`, `created_at`) VALUES
-(1, 'เสื้อยืดคอกลม', 'เสื้อยืดผ้าฝ้าย 100% สวมใส่สบาย', '199.00', 'tshirt.jpg', 50, '2026-09-04 03:47:42'),
-(2, 'กางเกงยีนส์', 'กางเกงยีนส์ทรงกระบอก สีฟ้าอ่อน', '799.00', 'jeans.jpg', 30, '2026-09-04 03:47:42'),
-(3, 'รองเท้าผ้าใบ', 'รองเท้าผ้าใบสีขาว ใส่ได้ทุกโอกาส', '1299.00', 'sneakers.jpg', 20, '2026-09-04 03:47:42');
+(1, 'เสื้อยืดคอกลม', 'เสื้อยืดผ้าฝ้าย 100% สวมใส่สบาย', '199.00', '1793331841_MERCEDES_-_AMG_PETRONAS_FORMULA_1_TEAM_DRIVER_JERSEY_Black_KF0165_01_laydown.avif', 50, '2026-09-04 03:47:42'),
+(2, 'กางเกงยีนส์', 'กางเกงยีนส์ทรงกระบอก สีฟ้าอ่อน', '799.00', '1793331947_IB6955_21_model.avif', 30, '2026-09-04 03:47:42'),
+(3, 'รองเท้าผ้าใบ', 'รองเท้าผ้าใบสีขาว ใส่ได้ทุกโอกาส', '1299.00', '1793331953_177967984665382da7d655342ac4c93c978637e231_thumbnail_750x999.jpg', 20, '2026-09-04 03:47:42');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `assets`
+--
+ALTER TABLE `assets`
+  ADD PRIMARY KEY (`asset_id`);
 
 --
 -- Indexes for table `contacts`
@@ -150,6 +183,12 @@ ALTER TABLE `products`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `assets`
+--
+ALTER TABLE `assets`
+  MODIFY `asset_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `contacts`

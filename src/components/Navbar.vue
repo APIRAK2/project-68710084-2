@@ -46,12 +46,12 @@
         </li>
            <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Register
+            Product
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Register</a></li>
-            <li><a class="dropdown-item" href="#">Login</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="/Product">Product</a></li>
+            <li><a class="dropdown-item" href="/show_product">Show product</a></li>
+            <li><a class="dropdown-item" href="/asset">Asset</a></li>
           </ul>
         </li>
 
