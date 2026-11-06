@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2026 at 06:09 AM
+-- Generation Time: Nov 06, 2026 at 05:02 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -119,7 +119,9 @@ INSERT INTO `employee` (`emp_id`, `firstName`, `lastName`, `phone`, `username`, 
 (000001, 'มีนา', 'มีเงิน', '038756000', 'mena', '1234'),
 (000002, 'ใจดี', 'เจได', '038756001', 'jaidee', '1234'),
 (000003, 'xy', 'law', '0123456789', 'X', '$2y$10$RNOClehhnmgcIY6GPWiZ3e5Sl0iUfZokuywcUcNnJMmuITzRjhQm6'),
-(000004, 'ly', 'hd', '0987456123', 'bb', '$2y$10$79OnBk6eO0wIFJhR1F08jOoQBLwoh9b.2TOYL8mHWKSw1tJH8VTJi');
+(000004, 'ly', 'hd', '0987456123', 'bb', '$2y$10$79OnBk6eO0wIFJhR1F08jOoQBLwoh9b.2TOYL8mHWKSw1tJH8VTJi'),
+(000005, 'ooooo', 'ooooo', '0265479454', 'Mon', '$2y$10$l3K4vBN3uYxH79AdZjqg1.hlpFduRb8pbnufNhyfg3m529TKb/8N.'),
+(000006, 'XY', 'LAWLIET', '0645648231', 'SIMON', '$2y$10$TDJ1wP2UxxdXLjM05xzMZOCp8.tYLxFgsglVHl1zH0o8R7d0VBm92');
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `emp_id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `products`
